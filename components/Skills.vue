@@ -1,14 +1,11 @@
 <template>
-  <section>
+  <div class="page">
     <b-container>
-      <b-row>
-        <b-col>1 of 3</b-col>
-        <b-col>2 of 3</b-col>
-        <b-col>3 of 3</b-col>
+      <b-row >
+        <b-col>1 of 4</b-col>
       </b-row>
     </b-container>
-
-  </section>
+  </div>
 </template>
 
 <script>

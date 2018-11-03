@@ -19,9 +19,9 @@
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item v-scroll-to="{ element: '#home', duration: 1000 }">Qui suis-je</b-nav-item>
-        <b-nav-item v-scroll-to="{ element: '#skills', duration: 1000 }">Mes compétences</b-nav-item>
-        <b-nav-item v-scroll-to="{ element: '#contact', duration: 1000 }">Contactez-moi</b-nav-item>
+        <b-nav-item v-scroll-to="{ element: item.sectionRef, duration: 1000 }" v-for="item in items" :key="item.sectionRef" >
+          {{ item.text }}
+        </b-nav-item>
       </b-navbar-nav>
 
     </b-collapse>
@@ -43,8 +43,9 @@ export default {
   data: function() {
     return {
       items: [
-        { text: 'Qui sommes-nous ?', sectionRef: '#who' },
-        { text: 'Contactez-nous', sectionRef: '#contactus' }
+        { text: 'Qui suis-je ?', sectionRef: '#who' },
+        { text: 'Compétences ?', sectionRef: '#skills' },
+        { text: 'Contactez-moi', sectionRef: '#contact' }
       ]
     }
   },
@@ -117,9 +118,13 @@ a:focus::before {
 }
 
 .navbar {
-  background-color: transparent !important;
   position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #000 !important;
 }
+
 .navbar-light .navbar-toggler-icon {
   color: white !important;
 }
