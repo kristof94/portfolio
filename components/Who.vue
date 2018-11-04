@@ -12,7 +12,9 @@
           </div>
           <div class="text-center">
             <span class="icon">
-              <font-awesome-icon :icon="['fab', 'linkedin']" />
+              <a href="www.linkedin.com/in/dossantoschristophe">
+                <font-awesome-icon :icon="['fab', 'linkedin']" />
+              </a>
             </span>
           </div>
         </b-col>
