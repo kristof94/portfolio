@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <b-container>
-      <b-form-row class="d-flex é align-items-center justify-content-center text-center" style="width:100%;" >
+      <b-form-row class="d-flex é align-items-center justify-content-center text-center" style="width:100%;">
         <b-col cols="8">
           <b-form v-if="show" @submit="onSubmit">
             <b-form-group id="exampleInputGroup2" label="Your Name:" label-for="exampleInput2">
@@ -25,9 +25,11 @@
 </template>
 
 <script>
+import axios from '~/plugins/axios'
+
 export default {
   components: {},
-  data() {
+  data () {
     return {
       form: {
         email: '',
@@ -45,9 +47,13 @@ export default {
     }
   },
   methods: {
-    onSubmit(evt) {
-      evt.preventDefault()
-      alert(JSON.stringify(this.form))
+    async onSubmit (evt) {
+      await axios.post('/api/mail', this.form).then(function (response) {
+        console.log(response)
+      })
+        .catch(function (error) {
+          console.log(error)
+        })
     }
   }
 }

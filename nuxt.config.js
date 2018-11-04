@@ -1,66 +1,35 @@
-const pkg = require('./package')
-
 module.exports = {
-  mode: 'universal',
-  server: {
-    port: 3000, // default: 3000
-    host: '0.0.0.0'
-  },
-
   /*
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'starter',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
-
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-
+  server: {
+    port: 8000, // default: 3000
+    host: '0.0.0.0'
+  },
   /*
   ** Global CSS
   */
-  css: [],
-
+  css: ['~/assets/css/main.css'],
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [{ src: '~/plugins/fontawesome' }, { src: '~/plugins/scrollTo' }],
-
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
-    // Doc: https://bootstrap-vue.js.org/docs/
-    'bootstrap-vue/nuxt'
-  ],
-  /*
-  ** Axios module configuration
-  */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
-
-  /*
-  ** Build configuration
+  ** Add axios globally
   */
   build: {
     /*
-    ** You can extend webpack config here
+    ** Run ESLINT on save
     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
+    extend (config, { isDev }) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -69,5 +38,22 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  axios: {
+    // proxyHeaders: false
+  },
+  modules: [
+    'nuxt-fontawesome',
+    'bootstrap-vue/nuxt',
+    // Or if you have custom bootstrap CSS...
+    ['bootstrap-vue/nuxt', { css: false }]
+  ],
+  plugins: [
+    { src: '~/plugins/scrollTo', ssr: false },
+    { src: '~/plugins/fontawesome' }
+  ],
+  serverMiddleware: [
+    // API middleware
+    '~/api/index.js'
+  ]
 }

@@ -40,7 +40,7 @@ export default {
       required: true
     }
   },
-  data: function() {
+  data: function () {
     return {
       items: [
         { text: 'Qui suis-je ?', sectionRef: '#who' },
@@ -50,7 +50,7 @@ export default {
     }
   },
   methods: {
-    lanchModal() {
+    lanchModal () {
       // LoginModal.$refs.myModalRef.show()
     }
   }
