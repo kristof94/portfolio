@@ -57,6 +57,6 @@ module.exports = {
     '~/api/index.js'
   ],
   router: {
-    base: '/Portfolio/'
+    base: '/portfolio/'
   }
 }
