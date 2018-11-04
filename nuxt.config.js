@@ -55,5 +55,8 @@ module.exports = {
   serverMiddleware: [
     // API middleware
     '~/api/index.js'
-  ]
+  ],
+  router: {
+    base: '/Portfolio/'
+  }
 }
