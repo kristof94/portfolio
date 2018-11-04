@@ -89,8 +89,8 @@ export default {
   background-position: center;
   background-size: cover;
   color: #fff;
-  height: 100vh;
   width: 100%;
+  margin-top: 20px;
 }
 main {
   height: auto;

@@ -12,9 +12,9 @@
           </div>
           <div class="text-center">
             <a href="http://www.linkedin.com/in/dossantoschristophe">
-            <span class="icon">
+              <span class="icon">
                 <font-awesome-icon :icon="['fab', 'linkedin']" />
-            </span>
+              </span>
             </a>
           </div>
         </b-col>
@@ -40,6 +40,13 @@ export default {
   align-content: center;
 }
 @media screen and (min-width: 360px) {
+  .row {
+    display: flex;
+  }
+  .col {
+    display: block;
+    text-align: center;
+  }
   .col-sm-6 {
     margin-top: 20px;
   }

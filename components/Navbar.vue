@@ -52,9 +52,9 @@ export default {
 
 <style>
 .navbar {
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 1;*/
   width: 100%;
   background-color: #000 !important;
 }

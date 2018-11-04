@@ -1,7 +1,7 @@
 <template>
  <section v-bind:id="id">
     <b-container class="d-flex page">
-      <b-form-row class="d-flex align-items-center justify-content-center text-center" style="width:100%;">
+      <b-form-row class="align-items-center justify-content-center text-center" style="width:100%;">
         <b-col cols="8">
           <b-form v-if="show" @submit="onSubmit">
             <b-form-group id="exampleInputGroup2" label="Your Name:" label-for="exampleInput2">
