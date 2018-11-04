@@ -20,7 +20,7 @@ app.use(parseForm) // handle URL-encoded data
 app.use(csrfProtection)
 app.use(mail)
 
-app.get('/getcsrftoken', csrfProtection, function (req, res) {
+app.get('/getcsrftoken', function (req, res) {
   return res.json({ csrfToken: req.csrfToken() })
 })
 

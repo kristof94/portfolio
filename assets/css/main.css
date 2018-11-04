@@ -3,9 +3,8 @@ html, body
   background-color: #fff;
   color: #000;
   letter-spacing: 0.5px;
-  font-family: "Source Sans Pro", Arial, sans-serif;
-  height: 100vh;
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 footer
@@ -13,6 +12,9 @@ footer
   padding: 20px;
   text-align: center;
   border-top: 1px solid #ddd;
+  font-weight: 900;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 a, a:hover, a:focus, a:visited

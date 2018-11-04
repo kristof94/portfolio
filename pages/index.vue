@@ -1,11 +1,9 @@
 <template>
-  <div id="home" class="page0">
-    <div class="page">
-      <navbar :title="title" />
-      <who id="who" />
-    </div>
+  <div id="home">
+    <navbar :title="title" />
+    <who :id="who" />
     <skills id="skills" />
-    <contact id="contact" />
+    <contact :id="contact" />
     <footer>Je ne mange pas de cookie</footer>
   </div>
 </template>
@@ -33,7 +31,9 @@ export default {
   },
   data () {
     return {
-      title: 'Mon portfolio'
+      title: 'Mon portfolio',
+      who: 'who',
+      contact: 'contact'
     }
   }
 }
@@ -43,11 +43,14 @@ export default {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 .container {
-  height: 100%;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   align-items: center;
+}
+.blackOnWhite{
+  color: #000
 }
 .scrollablebody {
   position: relative;
@@ -77,7 +80,8 @@ export default {
   background-position: center;
   background-size: cover;
   width: 100%;
-  background: linear-gradient(#ff6465, #3f4588);
+  /*background: linear-gradient(#ff6465, #3f4588);*/
+  background-color: #fff;
 }
 .page {
   background-repeat: no-repeat;
@@ -87,7 +91,6 @@ export default {
   color: #fff;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
 }
 main {
   height: auto;

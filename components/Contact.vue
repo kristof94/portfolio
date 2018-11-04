@@ -1,7 +1,7 @@
 <template>
-  <div class="page">
-    <b-container>
-      <b-form-row class="d-flex é align-items-center justify-content-center text-center" style="width:100%;">
+ <section v-bind:id="id">
+    <b-container class="d-flex page">
+      <b-form-row class="d-flex align-items-center justify-content-center text-center" style="width:100%;">
         <b-col cols="8">
           <b-form v-if="show" @submit="onSubmit">
             <b-form-group id="exampleInputGroup2" label="Your Name:" label-for="exampleInput2">
@@ -21,7 +21,7 @@
         </b-col>
       </b-form-row>
     </b-container>
-  </div>
+ </section>
 </template>
 
 <script>
@@ -29,6 +29,9 @@ import axios from '~/plugins/axios'
 
 export default {
   components: {},
+  props: {
+    id: String
+  },
   data () {
     return {
       form: {
@@ -63,6 +66,10 @@ export default {
 .btn {
   background-color: black;
   border-color: transparent;
+}
+
+label{
+  color : #000;
 }
 
 .btn:hover {

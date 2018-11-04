@@ -1,8 +1,5 @@
 <template>
-  <b-navbar
-    toggleable="md"
-    sticky>
-
+  <b-navbar toggleable="md" data-spy="affix" data-offset-top="197">
     <no-ssr>
       <b-navbar-toggle target="nav_collapse">
         <span>
@@ -13,17 +10,14 @@
 
     <b-navbar-brand v-scroll-to="{ element: '#home', duration: 1000 }"><a>Mon Portfolio</a></b-navbar-brand>
 
-    <b-collapse
-      id="nav_collapse"
-      is-nav>
+    <b-collapse id="nav_collapse" is-nav>
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item v-scroll-to="{ element: item.sectionRef, duration: 1000 }" v-for="item in items" :key="item.sectionRef" >
+        <b-nav-item v-scroll-to="{ element: item.sectionRef, duration: 1000 }" v-for="item in items" :key="item.sectionRef">
           {{ item.text }}
         </b-nav-item>
       </b-navbar-nav>
-
     </b-collapse>
   </b-navbar>
 </template>
@@ -43,7 +37,6 @@ export default {
   data: function () {
     return {
       items: [
-        { text: 'Qui suis-je ?', sectionRef: '#who' },
         { text: 'Compétences ?', sectionRef: '#skills' },
         { text: 'Contactez-moi', sectionRef: '#contact' }
       ]
@@ -58,6 +51,14 @@ export default {
 </script>
 
 <style>
+.navbar {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #000 !important;
+}
+
 ol,
 ul {
   list-style: none;
@@ -78,7 +79,7 @@ a:active {
   text-decoration: none;
 }
 a {
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   transition: color 0.1s, background-color 0.1s;
 }
@@ -96,7 +97,7 @@ a {
   color: #fff;
 }
 a::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: 3px;
@@ -115,14 +116,6 @@ a:hover::before,
 a:focus::before {
   transform-origin: left top;
   transform: scale(1, 1);
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  background-color: #000 !important;
 }
 
 .navbar-light .navbar-toggler-icon {
