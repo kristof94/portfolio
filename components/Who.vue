@@ -3,7 +3,7 @@
     <b-container class="d-flex page">
       <b-row class="align-items-center">
         <b-col>
-          <b-img rounded width="300" height="300" fluid alt="Me" src="/img/face.JPEG" />
+          <b-img rounded width="300" height="300" fluid alt="Me" src="/portfolio/img/face.JPEG" />
         </b-col>
         <b-col cols="12" sm="6" lg="6" class="blackOnWhite">
           <div class="justify-content-left">
@@ -11,11 +11,11 @@
             <br />
           </div>
           <div class="text-center">
+            <a href="http://www.linkedin.com/in/dossantoschristophe">
             <span class="icon">
-              <a href="www.linkedin.com/in/dossantoschristophe">
                 <font-awesome-icon :icon="['fab', 'linkedin']" />
-              </a>
             </span>
+            </a>
           </div>
         </b-col>
       </b-row>

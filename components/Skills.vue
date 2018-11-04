@@ -3,7 +3,7 @@
     <b-container class="d-flex page">
     <b-row class="justify-content-center text-center align-items-center ">
       <b-col>
-        <b-img rounded width="300" height="300" fluid alt="Me" src="/img/face.JPEG" />
+        <b-img rounded width="300" height="300" fluid alt="Me" src="/portfolio/img/face.JPEG" />
       </b-col>
       <b-col cols="12" sm="8" lg="8" class="blackOnWhite">
         Christophe DOS SANTOS, 24 ans, jeune développeur, sportif et fétard quand il ne code pas.

@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     async onSubmit (evt) {
-      await axios.post('/api/mail', this.form).then(function (response) {
+      await axios.post('/portfolio/api/mail', this.form).then(function (response) {
         console.log(response)
       })
         .catch(function (error) {
