@@ -23,11 +23,11 @@ export default {
     Contact
   },
   mounted () {
-    axios.get('/portfolio/api/getcsrftoken').then((response) => {
+    /* axios.get('/portfolio/api/getcsrftoken').then((response) => {
       axios.defaults.headers.common['X-CSRF-TOKEN'] = response.data.csrfToken
     }, (err) => {
       console.log(err)
-    })
+    }) */
   },
   data () {
     return {
