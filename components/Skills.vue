@@ -64,7 +64,7 @@ export default {
           img: '/portfolio/img/nodejs.png',
           text: 'NodeJS' },
         { name: 'VueJS',
-          max: 60,
+          max: 80,
           value: 0,
           img: '/portfolio/img/vuejs.png',
           text: 'VueJS' },
