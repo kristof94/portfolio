@@ -1,17 +1,31 @@
 <template>
-  <section v-bind:id="id"  v-on:scroll.native="changeProgress" class="vertical-center">
+  <section v-bind:id="id" v-on:scroll.native="changeProgress" class="vertical-center">
     <b-container class="justify-content-center align-items-center">
-      <b-row v-for="skill in skills" :key="skill.name" class="justify-content-center text-center align-items-center">
+      <b-row v-for="skill in skills" :key="skill.name" class="mainL justify-content-center text-center align-items-center">
         <b-col cols="12" sm="1" lg="1">
           {{skill.name}}
         </b-col>
         <b-col cols="12" sm="1" lg="1">
           <b-img rounded width="40" height="80" fluid :alt="skill.name" :src="skill.img" />
         </b-col>
-        <b-col cols="11" sm="11" lg="10">
-          <b-progress :label="skill.name" :value="skill.value" :max="skill.max" show-progress animated></b-progress>
+        <b-col class="align-items-center" cols="11" sm="11" lg="10">
+          <b-progress :label="skill.name" :value="skill.value" :max="max" show-progress animated></b-progress>
         </b-col>
+        <b-container v-if="skill.framework">
+          <b-row v-for="subSkill in skill.framework" :key="subSkill.name" class="justify-content-left align-items-center framework">
+            <b-col offset="1" cols="9" sm="1" lg="1">
+              {{subSkill.name}}
+            </b-col>
+            <b-col cols="1" sm="1" lg="1">
+              <b-img rounded width="20" height="40" fluid :alt="subSkill.name" :src="subSkill.img" />
+            </b-col>
+            <b-col cols="1" sm="1" lg="9">
+              <b-progress :label="subSkill.name" :value="subSkill.value" :max="max" show-progress animated></b-progress>
+            </b-col>
+          </b-row>
+        </b-container>
       </b-row>
+
     </b-container>
   </section>
 </template>
@@ -29,59 +43,77 @@ export default {
       scrolled: false,
       max: 100,
       skills: [
-        { name: 'xamarin', max: 50, value: 0, img: '/portfolio/img/xamarin.png', text: 'hohho' },
-        { name: 'javascript', max: 75, value: 0, img: '/portfolio/img/javascript.png', text: 'hohho' },
-        { name: 'java', max: 90, value: 0, img: '/portfolio/img/java.png', text: 'hohho' }
+        { name: 'Java',
+          max: 90,
+          value: 0,
+          img: '/portfolio/img/java.png',
+          text: 'Java' },
+        { name: 'Android',
+          max: 90,
+          value: 0,
+          img: '/portfolio/img/android.png',
+          text: 'Android' },
+        { name: 'JavaScript',
+          max: 75,
+          value: 0,
+          img: '/portfolio/img/javascript.png',
+          text: 'JavaScript' },
+        { name: 'NodeJS',
+          max: 75,
+          value: 0,
+          img: '/portfolio/img/nodejs.png',
+          text: 'NodeJS' },
+        { name: 'VueJS',
+          max: 60,
+          value: 0,
+          img: '/portfolio/img/vuejs.png',
+          text: 'VueJS' },
+        { name: 'Xamarin', max: 50, value: 0, img: '/portfolio/img/xamarin.png', text: 'Xamarin' },
+        { name: 'Oracle DB',
+          max: 50,
+          value: 0,
+          img: '/portfolio/img/oracle.png',
+          text: 'Oracle DB' }
       ],
       total: 100,
       timer: null
     }
   },
-  methods: {
-    incrementProgress () {
-      this.timer = setInterval(() => {
-        this.skills.filter(skill => {
-          return skill.value < skill.max
-        }).forEach(skill => {
-          skill.value += 5
+  mounted () {
+    this.skills.forEach(skill => {
+      skill.value = skill.max
+      if (skill.framework) {
+        skill.framework.forEach(subskill => {
+          subskill.value = subskill.max
         })
-      }, 500)
-    },
-    changeProgress () {
-      const posY = window.document.getElementById('skills').offsetTop
-      const test = window.scrollY >= posY && window.scrollY <= posY + window.document.getElementById('skills').offsetHeight
-      if (test) {
-        this.incrementProgress()
       }
-    }
-  },
-
-  created () {
-    if (process.browser) {
-      window.addEventListener('scroll', this.changeProgress)
-    }
-  },
-  destroyed () {
-    if (process.browser) {
-      window.removeEventListener('scroll', this.changeProgress, this.resetProgress)
-      clearInterval(this.timer)
-      this.timer = null
-    }
+    })
   }
 }
 </script>
 
 <style>
-
 .vertical-center {
   height: 100vh;
   display: flex;
   align-items: center;
 }
+
+.mainL {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.framework {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+.progress-bar {
+}
+
 @media screen and (min-width: 1079px) {
-  
   .col-12 {
-    margin-top: 20px;
   }
 }
 </style>

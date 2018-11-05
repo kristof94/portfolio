@@ -37,7 +37,7 @@ export default {
   data: function () {
     return {
       items: [
-        { text: 'Compétences ?', sectionRef: '#skills' },
+        { text: 'Compétences', sectionRef: '#skills' },
         { text: 'Contactez-moi', sectionRef: '#contact' }
       ]
     }

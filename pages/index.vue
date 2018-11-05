@@ -4,7 +4,7 @@
     <who :id="who" />
     <skills id="skills" />
     <contact :id="contact" />
-    <footer>Je ne mange pas de cookie</footer>
+    <footer>Je ne mange pas de cookies</footer>
   </div>
 </template>
 
@@ -90,6 +90,7 @@ export default {
   background-size: cover;
   color: #fff;
   width: 100%;
+  height: 100vh;
   margin-top: 20px;
 }
 main {

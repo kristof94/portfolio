@@ -7,13 +7,18 @@
         </b-col>
         <b-col cols="12" sm="6" lg="6" class="blackOnWhite">
           <div class="justify-content-left">
-            Christophe DOS SANTOS, 24 ans, sportif, fétard et amateur de burger quand il ne code pas.
+            Christophe DOS SANTOS, 24 ans, sportif, fêtard et amateur de burger quand il ne code pas.
             <br />
           </div>
           <div class="text-center">
-            <a href="http://www.linkedin.com/in/dossantoschristophe">
+            <a style='display:inline;' href="http://www.linkedin.com/in/dossantoschristophe">
               <span class="icon">
                 <font-awesome-icon :icon="['fab', 'linkedin']" />
+              </span>
+            </a>
+            <a style='display:inline;' href="http://www.linkedin.com/in/dossantoschristophe">
+              <span class="icon-pdf">
+                <font-awesome-icon :icon="['fa', 'file-pdf']"/>
               </span>
             </a>
           </div>
@@ -37,6 +42,11 @@ export default {
 .icon {
   font-size: 30px;
   color: #00a0dc;
+  align-content: center;
+}
+.icon-pdf {
+  font-size: 28px;
+  color: #ce304a;
   align-content: center;
 }
 @media screen and (min-width: 360px) {
