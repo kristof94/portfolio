@@ -3,7 +3,6 @@
     <navbar :title="title" />
     <who :id="who" />
     <skills id="skills" />
-    <contact :id="contact" />
     <footer>Je ne mange pas de cookies</footer>
   </div>
 </template>
