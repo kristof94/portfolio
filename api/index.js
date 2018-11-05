@@ -17,7 +17,7 @@ var parseForm = bodyParser.urlencoded({ extended: false })
 app.use(cookieParser())
 app.use(bodyParser.json()) // handle json data
 app.use(parseForm) // handle URL-encoded data
-app.use(csrfProtection)
+// app.use(csrfProtection)
 app.use(mail)
 
 app.get('/getcsrftoken', function (req, res) {
