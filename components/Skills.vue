@@ -6,7 +6,7 @@
           {{skill.name}}
         </b-col>
         <b-col cols="12" sm="1" lg="1">
-          <b-img rounded width="40" height="80" fluid :alt="skill.name" :src="skill.img" />
+          <b-img rounded fluid :alt="skill.name" :src="skill.img" />
         </b-col>
         <b-col class="align-items-center" cols="11" sm="11" lg="10">
           <b-progress :label="skill.name" :value="skill.value" :max="max" show-progress animated></b-progress>
@@ -17,7 +17,7 @@
               {{subSkill.name}}
             </b-col>
             <b-col cols="1" sm="1" lg="1">
-              <b-img rounded width="20" height="40" fluid :alt="subSkill.name" :src="subSkill.img" />
+              <b-img rounded fluid :alt="subSkill.name" :src="subSkill.img" />
             </b-col>
             <b-col cols="1" sm="1" lg="9">
               <b-progress :label="subSkill.name" :value="subSkill.value" :max="max" show-progress animated></b-progress>
