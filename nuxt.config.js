@@ -10,10 +10,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ]
   },
-  server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0'
-  },
+
   /*
   ** Global CSS
   */

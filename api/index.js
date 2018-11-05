@@ -10,7 +10,6 @@ const config = require('../nuxt.config.js')
 const nuxt = new Nuxt(config)
 // Create express instnace
 const app = express()
-const port = 8000
 // Import API Routes
 var csrfProtection = csrf({ cookie: true })
 var parseForm = bodyParser.urlencoded({ extended: false })
@@ -38,7 +37,7 @@ if (config.dev) {
 function listen () {
   // Écouter le serveur
   // app.listen(port, '0.0.0.0')
-  console.log('Le serveur écoute sur `localhost:' + port + '`.')
+  console.log('Le serveur écoute sur `localhost:' + '`.')
 }
 
 // Export the server middleware
