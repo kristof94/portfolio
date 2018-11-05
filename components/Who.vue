@@ -7,7 +7,8 @@
         </b-col>
         <b-col cols="12" sm="6" lg="6" class="blackOnWhite">
           <div class="justify-content-left">
-            Christophe DOS SANTOS, 24 ans, sportif, fêtard et amateur de burger quand il ne code pas.
+            <h1>Christophe DOS SANTOS</h1>
+            <h2>24 ans, sportif, fêtard et amateur de burger quand il ne code pas.</h2>
           </div>
           <div class="icon">
             <div class="text-center">

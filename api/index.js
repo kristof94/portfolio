@@ -20,6 +20,7 @@ app.use(csrfProtection)
 app.use(mail)
 
 app.get('/getcsrftoken', function (req, res) {
+  res.setHeader("Content-Security-Policy", "script-src 'self' https://apis.google.com");
   return res.json({ csrfToken: req.csrfToken() })
 })
 
