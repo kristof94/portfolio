@@ -11,7 +11,7 @@
     "precommit": "npm run lint",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
-    "push" : "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "push": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "generate": "nuxt generate"
   },
   "dependencies": {
