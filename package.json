@@ -12,7 +12,8 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
     "push": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.4.1",
