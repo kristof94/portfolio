@@ -5,9 +5,9 @@
   "author": "kristof <christophe-dossantos@outlook.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "NUXT_PORT=process.env.PORT nuxt",
     "build": "nuxt build",
-    "start": "nuxt build && nuxt start",
+    "start": "nuxt start",
     "precommit": "npm run lint",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup",
