@@ -43,6 +43,12 @@ h2 {
   /*for IE*/
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
 footer {
   padding: 20px;
   width: 100%;
