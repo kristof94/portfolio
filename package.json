@@ -27,6 +27,7 @@
     "cookie-parser": "^1.4.3",
     "csurf": "^1.9.0",
     "express": "^4.15.3",
+    "mailgun-js": "^0.22.0",
     "nodemailer": "^4.6.8",
     "nuxt": "latest",
     "nuxt-fontawesome": "^0.3.0",
