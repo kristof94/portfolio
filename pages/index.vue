@@ -1,9 +1,8 @@
 <template>
-  <div id="home">
+  <div id="home" class="page">
     <navbar :items="items" :rlinks="rlinks" :title="title" />
     <who :id="who" />
-    <skills id="skills" />
-    <contact :id="contact" />
+    
     <foot/>
   </div>
 </template>
@@ -48,62 +47,6 @@ export default {
 }
 </script>
 <style>
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-.container {
-  /*display: flex;*/
-  justify-content: center;
-  align-items: center;
-}
-.blackOnWhite{
-  color: #000
-}
-.scrollablebody {
-  position: relative;
-  overflow-y: scroll;
-  height: 100%;
-  border-color: black;
-  border-style: solid;
-}
-.layout {
-  display: table;
-  width: 100%;
-  height: 100vh;
-}
-.layout__row {
-  display: table-row;
-}
-.layout__cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-.layout__cell--last {
-  height: 100%;
-}
-.page0 {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  /*background: linear-gradient(#ff6465, #3f4588);*/
-  background-color: #fff;
-}
-.page {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  color: #fff;
-  width: 100%;
-  height: 100vh;
-  margin-top: 20px;
-}
-main {
-  height: auto;
-}
 
 </style>

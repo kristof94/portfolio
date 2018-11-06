@@ -1,7 +1,7 @@
 <template>
-  <b-navbar toggleable="md" data-spy="affix" data-offset-top="197">
+  <b-navbar variant="dark" toggleable="md">
     <no-ssr>
-      <b-navbar-toggle target="nav_collapse">
+      <b-navbar-toggle v-if="this.items[0]"  target="nav_collapse">
         <span>
           <font-awesome-icon :icon="['fa', 'bars']" />
         </span>
@@ -47,27 +47,35 @@ export default {
 };
 </script>
 
-<style>
-.navbar {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: #000 !important;
-}
-
+<style scoped>
 ol,
 ul {
   list-style: none;
 }
 li {
   display: inline-block;
-  padding: 20px 0 20px;
   vertical-align: middle;
 }
 .navbar-brand:hover {
   color: #fff !important;
 }
+
+.navbar-light .navbar-brand {
+  color: white;
+}
+.navbar-brand:hover{
+  color: white !important;
+}
+.navbar-light .navbar-toggler-icon {
+  color: white !important;
+}
+.navbar.navbar-light .navbar-nav .nav-link {
+  color: white !important;
+}
+.navbar.navbar-light .navbar-toggler {
+  color: white !important;
+}
+
 
 a:hover,
 a:focus,
@@ -76,7 +84,6 @@ a:active {
   text-decoration: none;
 }
 a {
-  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   transition: color 0.1s, background-color 0.1s;
 }
@@ -113,29 +120,5 @@ a:hover::before,
 a:focus::before {
   transform-origin: left top;
   transform: scale(1, 1);
-}
-
-.navbar-light .navbar-toggler-icon {
-  color: white !important;
-}
-.navbar.navbar-light .navbar-nav .nav-item .nav-link {
-  color: white !important;
-}
-.navbar.navbar-light .navbar-toggler {
-  color: white !important;
-  border-color: rgba(0, 0, 0, 0) !important;
-}
-.navbar-light .navbar-brand {
-  color: white;
-}
-.btn-primary-outline {
-  background-color: transparent !important;
-  border-color: transparent !important;
-}
-
-@media screen and (max-width: 640px) {
-  .navbar-brand {
-    font-size: 0.75rem;
-  }
 }
 </style>

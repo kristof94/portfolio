@@ -93,28 +93,5 @@ export default {
 </script>
 
 <style>
-.vertical-center {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
 
-.mainL {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.framework {
-  margin-bottom: 0px !important;
-  margin-top: 0px !important;
-}
-
- @media (max-width: 480px) {
-  .img-icon{
-    height: 40px;
-    width: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
 </style>

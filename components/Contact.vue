@@ -63,18 +63,5 @@ export default {
 </script>
 
 <style>
-.btn {
-  background-color: black;
-  border-color: transparent;
-}
 
-label{
-  color : #000;
-}
-
-.btn:hover {
-  background-color: #fff;
-  color: #000;
-  border-color: transparent;
-}
 </style>
