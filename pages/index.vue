@@ -1,10 +1,10 @@
 <template>
   <div id="home">
-    <navbar :title="title" />
+    <navbar :items="items" :rlinks="rlinks" :title="title" />
     <who :id="who" />
     <skills id="skills" />
     <contact :id="contact" />
-    <footer>Je ne mange pas de cookies</footer>
+    <foot/>
   </div>
 </template>
 
@@ -13,6 +13,7 @@ import Navbar from '~/components/Navbar.vue'
 import Who from '~/components/Who.vue'
 import Contact from '~/components/Contact.vue'
 import Skills from '~/components/Skills.vue'
+import Footer from '~/components/Footer.vue'
 import axios from '~/plugins/axios'
 
 export default {
@@ -20,7 +21,8 @@ export default {
     Navbar,
     Skills,
     Who,
-    Contact
+    Contact,
+    'foot' : Footer
   },
   mounted () {
     axios.get('/api/getcsrftoken').then((response) => {
@@ -33,7 +35,14 @@ export default {
     return {
       title: 'Mon portfolio',
       who: 'who',
-      contact: 'contact'
+      contact: 'contact',
+      items: [
+        { text: "Compétences", sectionRef: "#skills" },
+        { text: "Contactez-moi", sectionRef: "#contact" }
+      ],
+      rlinks: [
+        { text: "A propos" , link: "about"}
+      ]
     }
   }
 }
@@ -96,12 +105,5 @@ export default {
 main {
   height: auto;
 }
-footer {
-  bottom: 0;
-  padding: 20px;
-  height: 10vh;
-  text-align: center;
-  background-color: black;
-  color: #fff;
-}
+
 </style>

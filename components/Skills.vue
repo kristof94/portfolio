@@ -6,7 +6,7 @@
           {{skill.name}}
         </b-col>
         <b-col cols="12" sm="1" lg="1">
-          <b-img rounded fluid :alt="skill.name" :src="skill.img" />
+          <b-img class="img-icon" rounded fluid :alt="skill.name" :src="skill.img" />
         </b-col>
         <b-col class="align-items-center" cols="11" sm="11" lg="10">
           <b-progress :label="skill.name" :value="skill.value" :max="max" show-progress animated></b-progress>
@@ -109,11 +109,12 @@ export default {
   margin-top: 0px !important;
 }
 
-.progress-bar {
-}
-
-@media screen and (min-width: 1079px) {
-  .col-12 {
+ @media (max-width: 480px) {
+  .img-icon{
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 </style>

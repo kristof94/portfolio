@@ -76,4 +76,15 @@ export default {
     margin-top: 20px;
   }
 }
+
+ @media (max-width: 480px) {
+  h1{
+    text-align: center;
+    justify-content: center;
+  }
+  h2{
+    text-align: center;
+    justify-content: center;
+  }
+}
 </style>

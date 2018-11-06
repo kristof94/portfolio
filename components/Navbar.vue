@@ -8,7 +8,7 @@
       </b-navbar-toggle>
     </no-ssr>
 
-    <b-navbar-brand v-scroll-to="{ element: '#home', duration: 1000 }"><a>Mon Portfolio</a></b-navbar-brand>
+    <b-navbar-brand to="/" v-scroll-to="{ element: '#home', duration: 1000 }">Mon Portfolio</b-navbar-brand>
 
     <b-collapse id="nav_collapse" is-nav>
 
@@ -17,6 +17,7 @@
         <b-nav-item v-scroll-to="{ element: item.sectionRef, duration: 1000 }" v-for="item in items" :key="item.sectionRef">
           {{ item.text }}
         </b-nav-item>
+        <b-nav-item v-for="link in rlinks" :key="link.link" :to="link.link">{{ link.text }}</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -24,37 +25,33 @@
 
 
 <script>
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
 export default {
   components: {},
   props: {
     title: {
       type: String,
       required: true
-    }
-  },
-  data: function () {
-    return {
-      items: [
-        { text: 'Compétences', sectionRef: '#skills' },
-        { text: 'Contactez-moi', sectionRef: '#contact' }
-      ]
-    }
-  },
-  methods: {
-    lanchModal () {
-      // LoginModal.$refs.myModalRef.show()
+    },
+    items: {
+      type: Array,
+      required: true
+    },
+    rlinks: {
+      type: Array,
+      required: false
     }
   }
-}
+};
 </script>
 
 <style>
 .navbar {
-  /*position: absolute;
+  position: fixed;
   top: 0;
-  z-index: 1;*/
+  z-index: 1;
   width: 100%;
   background-color: #000 !important;
 }

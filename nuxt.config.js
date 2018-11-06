@@ -1,22 +1,38 @@
 module.exports = {
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: 'Christophe Dos Santos',
     htmlAttrs: {
       lang: 'fr-FR'
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
-      { name: 'msapplication-TileColor', content: '#ffffff' },
-      { name: 'msapplication-TileImage', content: '/ms-icon-144x144.png' },
-      { name: 'theme-color', content: '#ffffff' }
-    ],
-    link: [
+    meta: [{
+        charset: 'utf-8'
+      },
       {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Nuxt.js project'
+      },
+      {
+        name: 'msapplication-TileColor',
+        content: '#ffffff'
+      },
+      {
+        name: 'msapplication-TileImage',
+        content: '/ms-icon-144x144.png'
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff'
+      }
+    ],
+    link: [{
         rel: 'apple-touch-icon',
         size: '57x57',
         href: '/apple-icon-57x57.png'
@@ -89,17 +105,19 @@ module.exports = {
   },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: ['~/assets/css/main.css'],
   /*
-  ** Add axios globally
-  */
+   ** Add axios globally
+   */
   build: {
     /*
-    ** Run ESLINT on save
-    */
-    extend (config, { isDev }) {
+     ** Run ESLINT on save
+     */
+    extend(config, {
+      isDev
+    }) {
       if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
@@ -117,11 +135,17 @@ module.exports = {
     'nuxt-fontawesome',
     'bootstrap-vue/nuxt',
     // Or if you have custom bootstrap CSS...
-    ['bootstrap-vue/nuxt', { css: false }]
+    ['bootstrap-vue/nuxt', {
+      css: false
+    }]
   ],
-  plugins: [
-    { src: '~/plugins/scrollTo', ssr: false },
-    { src: '~/plugins/fontawesome' }
+  plugins: [{
+      src: '~/plugins/scrollTo',
+      ssr: false
+    },
+    {
+      src: '~/plugins/fontawesome'
+    }
   ],
   serverMiddleware: [
     // API middleware
