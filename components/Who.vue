@@ -1,15 +1,13 @@
 <template>
   <section v-bind:id="id" class="who">
-    <b-container class="d-flex" >
-      <b-row class="align-items-center">
-        <b-col class="d-flex justify-content-center">
-          <b-img rounded fluid alt="Me" src="/img/face.JPEG" />
+    <b-container class="d-flex">
+      <b-row >
+        <b-col class="d-flex align-items-center justify-content-center">
+          <b-img fluid rounded alt="Me" src="/img/face.JPEG" />
         </b-col>
-        <b-col cols="12" sm="6" lg="6">
-          <div class="justify-content-left">
+        <b-col cols="12" sm="6" lg="6">          
             <h1>Christophe DOS SANTOS</h1>
-            <h2>24 ans, sportif, fêtard et amateur de burger quand il ne code pas.</h2>
-          </div>
+            <h2>24 ans, sportif, fêtard et amateur de burger quand il ne code pas.</h2>          
           <div class="icon">
               <a style='display:inline;' href="http://www.linkedin.com/in/dossantoschristophe">
                 <span class="icon-linkedin">
@@ -43,12 +41,13 @@ export default {
 </script>
 
 <style>
+
 .icon {
   margin-top: 20px;
   font-size: 28px;
   width: 100%;
   letter-spacing: 20px;
-  text-align: center !important;
+  text-align: center ;
 }
 .icon-linkedin {
   color: #00a0dc;

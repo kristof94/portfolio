@@ -2,29 +2,35 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.navbar {  
+
+.navbar {
   width: 100%;
   background-color: #000 !important;
-  display: flex;
 }
 
-.page{
+.page {
   display: flex;
   height: 100vh;
-  flex-direction: column;  
-  align-items:stretch;
-  align-content:stretch;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
 }
 
-.who{
-  flex-grow:1;
+.who {
+  flex-grow: 1;
+  display: flex;
+}
+
+h2 {  
+  font-size: 18px;
 }
 
 .container {
-  height: 100%;
+  align-items: center ;
+  /*for IE*/
 }
 
-footer {  
+footer {
   padding: 20px;
   width: 100%;
   text-align: center;
@@ -32,34 +38,44 @@ footer {
   color: #fff;
 }
 
+.col {
+  text-align: center;
+}
 @media (min-width: 1080px) {
-  img{
-    width:300px;
-    height: 300px; 
+  img {
+    width: 300px;
+    height: 300px;
   }
+  .row {
+    width: 100%;
+  }  
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .navbar {
     position: relative;
   }
-
-  img{
-    width: 150px;
-    height: 150px; 
+  .container {
+    align-items: normal ;
+    /*for IE*/
+  }
+  img {
+    width: 250px !important;
+    height: 250px !important;
   }
 
-  h1{
-    text-align: center;
-    justify-content: center;
+  h1 {
+    
     font-size: 24px;
   }
-  h2{
-    text-align: center;
-    justify-content: center;
+
+  h2 {
+    
     font-size: 20px;
   }
-  
-  
-}
 
+  .col,.col-sm-6{
+    margin-top: 20px;
+    text-align: center ;
+  }
+}
