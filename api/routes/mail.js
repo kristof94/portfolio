@@ -17,10 +17,10 @@ router.post('/mail', function (req, res, next) {
 
 function sendMail (email, name, text) {
   var data = {
-    from: name + ' : ' + email,
+    from: 'From ' + name,
     to: 'kristof.dsantos@gmail.com',
     subject: 'Hello',
-    text: text
+    text: 'From ' + email + '\n' + text
   }
 
   mailgun.messages().send(data, function (error, body) {
