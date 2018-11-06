@@ -2,7 +2,8 @@
   <div id="home" class="page">
     <navbar :items="items" :rlinks="rlinks" :title="title" />
     <who :id="who" />
-    
+    <skills id="skills" />
+    <contact :id="contact" />
     <foot/>
   </div>
 </template>

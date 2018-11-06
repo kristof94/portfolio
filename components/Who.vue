@@ -1,7 +1,7 @@
 <template>
   <section v-bind:id="id" class="who">
     <b-container class="d-flex">
-      <b-row >
+      <b-row>
         <b-col class="d-flex align-items-center justify-content-center">
           <b-img fluid rounded alt="Me" src="/img/face.JPEG" />
         </b-col>

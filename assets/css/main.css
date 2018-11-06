@@ -10,7 +10,7 @@
 
 .page {
   display: flex;
-  height: 100vh;
+  height: auto;
   flex-direction: column;
   align-items: stretch;
   align-content: stretch;
@@ -19,14 +19,27 @@
 .who {
   flex-grow: 1;
   display: flex;
+  height: 100vh;
 }
 
-h2 {  
+.skills {
+  flex-grow: 1;
+  display: flex;
+  height: 100vh;  
+}
+
+.contact {
+  flex-grow: 1;
+  display: flex;
+  height: 100vh;  
+}
+
+h2 {
   font-size: 18px;
 }
 
 .container {
-  align-items: center ;
+  align-items: center;
   /*for IE*/
 }
 
@@ -41,41 +54,61 @@ footer {
 .col {
   text-align: center;
 }
+
 @media (min-width: 1080px) {
   img {
     width: 300px;
     height: 300px;
   }
+
   .row {
     width: 100%;
-  }  
+  }
+
+  .skills{
+    display: flex ;
+    align-items: center ;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .navbar {
     position: relative;
   }
+  
+  .who {
+    flex-grow: 1;
+    display: flex;
+    height: 82vh;
+  }
+
   .container {
-    align-items: normal ;
+    align-items: normal;
     /*for IE*/
   }
+
   img {
-    width: 250px !important;
-    height: 250px !important;
+    width: 250px;
+    height: 250px;
+  }
+
+  .img-icon {
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   h1 {
-    
     font-size: 24px;
   }
 
   h2 {
-    
     font-size: 20px;
   }
 
-  .col,.col-sm-6{
-    margin-top: 20px;
-    text-align: center ;
+  .col,
+  .col-sm-6 {
+    text-align: center;
   }
 }

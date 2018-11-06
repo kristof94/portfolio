@@ -1,31 +1,17 @@
 <template>
-  <section v-bind:id="id" v-on:scroll.native="changeProgress" class="vertical-center">
-    <b-container class="justify-content-center align-items-center">
-      <b-row v-for="skill in skills" :key="skill.name" class="mainL justify-content-center text-center align-items-center">
-        <b-col cols="12" sm="1" lg="1">
+  <section class="skills" v-bind:id="id" >
+    <b-container>
+      <b-row v-for="skill in skills" :key="skill.name" class="d-flex align-items-center justify-content-center">
+        <b-col cols="2" sm="1" lg="1">
           {{skill.name}}
         </b-col>
-        <b-col cols="12" sm="1" lg="1">
+        <b-col cols="3" sm="1" lg="1" class="text-center">
           <b-img class="img-icon" rounded fluid :alt="skill.name" :src="skill.img" />
         </b-col>
-        <b-col class="align-items-center" cols="11" sm="11" lg="10">
+        <b-col cols="6" sm="11" lg="10">
           <b-progress :label="skill.name" :value="skill.value" :max="max" show-progress animated></b-progress>
-        </b-col>
-        <b-container v-if="skill.framework">
-          <b-row v-for="subSkill in skill.framework" :key="subSkill.name" class="justify-content-left align-items-center framework">
-            <b-col offset="1" cols="9" sm="1" lg="1">
-              {{subSkill.name}}
-            </b-col>
-            <b-col cols="1" sm="1" lg="1">
-              <b-img rounded fluid :alt="subSkill.name" :src="subSkill.img" />
-            </b-col>
-            <b-col cols="1" sm="1" lg="9">
-              <b-progress :label="subSkill.name" :value="subSkill.value" :max="max" show-progress animated></b-progress>
-            </b-col>
-          </b-row>
-        </b-container>
+        </b-col>        
       </b-row>
-
     </b-container>
   </section>
 </template>
