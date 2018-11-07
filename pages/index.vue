@@ -14,7 +14,6 @@ import Who from '~/components/Who.vue'
 import Contact from '~/components/Contact.vue'
 import Skills from '~/components/Skills.vue'
 import Footer from '~/components/Footer.vue'
-import axios from '~/plugins/axios'
 
 export default {
   components: {
@@ -22,14 +21,14 @@ export default {
     Skills,
     Who,
     Contact,
-    'foot' : Footer
+    'foot': Footer
   },
   mounted () {
-    axios.get('/api/getcsrftoken').then((response) => {
+    /* axios.get('/api/getcsrftoken').then((response) => {
       axios.defaults.headers.common['X-CSRF-TOKEN'] = response.data.csrfToken
     }, (err) => {
       console.log(err)
-    })
+    }) */
   },
   data () {
     return {
@@ -37,11 +36,11 @@ export default {
       who: 'who',
       contact: 'contact',
       items: [
-        { text: "Compétences", sectionRef: "#skills" },
-        { text: "Contactez-moi", sectionRef: "#contact" }
+        { text: 'Compétences', sectionRef: '#skills' },
+        { text: 'Contactez-moi', sectionRef: '#contact' }
       ],
       rlinks: [
-        { text: "A propos" , link: "about"}
+        { text: 'A propos', link: 'about'}
       ]
     }
   }
