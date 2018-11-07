@@ -37,7 +37,7 @@ export default {
   props: {
     id: String
   }
-};
+}
 </script>
 
 <style>
@@ -52,9 +52,15 @@ export default {
 .icon-linkedin {
   color: #00a0dc;
 }
+
 .icon-pdf {
   color: #ce304a;
 }
+
+.icon-mail {
+  color: #3caa61;
+}
+
 .icon-github {
   color: #272425;
 }

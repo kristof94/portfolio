@@ -1,25 +1,27 @@
 <template>
  <section  class="contact" v-bind:id="id">
     <b-container class="d-flex">
-      <b-form-row class="d-flex text-center align-items-center justify-content-center" style="width:100%">
-        <b-col cols="8">
-          <b-form v-if="show" @submit="onSubmit">
-            <b-form-group id="exampleInputGroup2" label="Your Name:" label-for="exampleInput2">
-              <b-form-input id="exampleInput2" v-model="form.name" type="text" required placeholder="Enter name" />
-            </b-form-group>
-            <b-form-group id="exampleInputGroup1" label="Email address:" label-for="exampleInput1">
-              <b-form-input id="exampleInput1" v-model="form.email" type="email" required placeholder="Enter email" />
-            </b-form-group>
-            <b-form-group id="exampleInputGroup3" label="Votre message:" label-for="exampleInput3">
-              <b-form-textarea id="exampleInput3" v-model="form.text" :rows="3" :max-rows="6" required placeholder="Enter something" />
-            </b-form-group>
-            <transition name="submitBtn">
-              <b-button type="submit" class="" variant="primary">Submit</b-button>
-            </transition>
-          </b-form>
-
+      <b-row>
+        <b-col class="d-flex align-items-center justify-content-center">          
+          <div class="icon">
+              <a style='display:inline;' href="http://www.linkedin.com/in/dossantoschristophe">
+                <span class="icon-linkedin">
+                  <font-awesome-icon :icon="['fab', 'linkedin']" />
+                </span>
+              </a>
+              <a style='display:inline;' href="mailto:christophe-dossantos@outlook.com?subject=From Portfolio">
+                <span class="icon-mail">
+                  <font-awesome-icon :icon="['fa', 'envelope']" />
+                </span>
+              </a>
+              <a style='display:inline;' href="https://github.com/kristof94?tab=repositories">
+                <span class="icon-github">
+                  <font-awesome-icon :icon="['fab', 'github-square']" />
+                </span>
+              </a>
+          </div>
         </b-col>
-      </b-form-row>
+      </b-row>
     </b-container>
  </section>
 </template>
