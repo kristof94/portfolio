@@ -40,7 +40,7 @@ export default {
         { text: 'Contactez-moi', sectionRef: '#contact' }
       ],
       rlinks: [
-        { text: 'A propos', link: 'about'}
+        { text: 'A propos', link: 'about' }
       ]
     }
   }
