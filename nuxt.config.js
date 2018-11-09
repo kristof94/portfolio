@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       name: 'viewport',
-      content: 'width=device-width, initial-scale=1, user-scalable=false'
+      content: 'width=device-width, initial-scale=1'
     },
     {
       hid: 'description',
@@ -85,21 +85,15 @@ module.exports = {
     },
     {
       rel: 'icon',
-      size: '32x32',
+      size: '36x36',
       type: 'image/png',
-      href: '/img/android-icon-32x32.png'
+      href: '/img/android-icon-36x36.png'
     },
     {
       rel: 'icon',
       size: '96x96',
       type: 'image/png',
       href: '/img/android-icon-96x96.png'
-    },
-    {
-      rel: 'icon',
-      size: '16x16',
-      type: 'image/png',
-      href: '/img/android-icon-16x16.png'
     }
     ]
   },

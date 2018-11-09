@@ -2,7 +2,7 @@
   <section class="skills" v-bind:id="id" >
     <b-container>
       <b-row v-for="skill in skills" :key="skill.name" class="d-flex align-items-center justify-content-center">
-        <b-col cols="2" sm="1" lg="1">
+        <b-col cols="3" sm="1" lg="1">
           {{skill.name}}
         </b-col>
         <b-col cols="3" sm="1" lg="1" class="text-center">

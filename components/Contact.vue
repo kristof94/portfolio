@@ -1,29 +1,23 @@
 <template>
- <section  class="contact" v-bind:id="id">
-    <b-container class="d-flex">
-      <b-row>
-        <b-col class="d-flex align-items-center justify-content-center">          
-          <div class="icon">
-              <a style='display:inline;' href="http://www.linkedin.com/in/dossantoschristophe">
-                <span class="icon-linkedin">
-                  <font-awesome-icon :icon="['fab', 'linkedin']" />
-                </span>
-              </a>
-              <a style='display:inline;' href="mailto:christophe-dossantos@outlook.com?subject=From Portfolio">
-                <span class="icon-mail">
-                  <font-awesome-icon :icon="['fa', 'envelope']" />
-                </span>
-              </a>
-              <a style='display:inline;' href="https://github.com/kristof94?tab=repositories">
-                <span class="icon-github">
-                  <font-awesome-icon :icon="['fab', 'github-square']" />
-                </span>
-              </a>
-          </div>
-        </b-col>
-      </b-row>
-    </b-container>
- </section>
+  <section class="contact" v-bind:id="id">
+    <div class="icon" >
+      <a style='display:inline;' href="http://www.linkedin.com/in/dossantoschristophe">
+        <span class="icon-linkedin">
+          <font-awesome-icon :icon="['fab', 'linkedin']" />
+        </span>
+      </a>
+      <a style='display:inline;' href="mailto:christophe-dossantos@outlook.com?subject=From Portfolio">
+        <span class="icon-mail">
+          <font-awesome-icon :icon="['fa', 'envelope']" />
+        </span>
+      </a>
+      <a style='display:inline;' href="https://github.com/kristof94?tab=repositories">
+        <span class="icon-github">
+          <font-awesome-icon :icon="['fab', 'github-square']" />
+        </span>
+      </a>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -65,5 +59,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>
