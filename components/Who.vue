@@ -7,7 +7,7 @@
         </b-col>
         <b-col cols="12" sm="6" lg="6">          
             <h1>Christophe DOS SANTOS</h1>
-            <h2>24 ans, sportif, fêtard et amateur de burger quand il ne code pas.</h2>          
+            <h2>25 ans, sportif, fêtard et amateur de kébab quand il ne code pas.</h2>          
           <div class="icon">
               <a style='display:inline;' href="http://www.linkedin.com/in/dossantoschristophe">
                 <span class="icon-linkedin">
